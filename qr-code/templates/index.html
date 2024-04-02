@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>hiiiii</title>
+    </head>
+    <body>
+        <div class ="title">
+            <h1> QRCode Generator</h1>
+            <h2>Insert anything to generate its QRCode</h2>
+        </div>
+        <form action="/" method ="post">
+            <input type="text" name ='link'>
+            <button type="submit"> Generate qr</button>
+        </form>
+        {% if data %}
+        <div class ="generated">
+            <img src="{{data}}" alt="  ">
+            <h3>Your generated QR code</h3>
+            <h4>  woohoooo</h4>
+        </div>
+        {% endif %}
+    </body>
+</html>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html, 
+    body{
+        /* margin:0rem ; */
+        font-family: "Poppins",sans-serif;
+    }
+    .title {
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    form input{
+        background: wheat;
+        color: black;
+        width: 50%;
+        padding: 0.5rem 1rem;
+    }
+    form button{
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        background: black;
+        border: none;
+        color: wheat;
+        padding: 1 rem;
+        cursor: pointer;
+    }
+    .generated{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
